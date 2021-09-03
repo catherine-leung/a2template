@@ -57,6 +57,7 @@ int main(void){
         if(!result){
             std::cout << "Test " << i+1 <<" - "<< testSummary[i]<< ": failed." << std::endl;
             std::cout << msg << std::endl;
+	    
         }
         else{
             numPassed++;
@@ -65,9 +66,15 @@ int main(void){
     }
     if(numPassed == numTests){
         std::cout << "Congratulations! You have passed testing for A1 part 1" << std::endl;
+	int array[10];
+	for(int i=0;i<100000;i++){
+		array[i]=i;
+	}
+	return 0;
     }
     else{
         std::cout << "Looks like you still have some work left to do" << std::endl;
+	exit(1);
     }
 }
 bool test1(std::string& error){
